@@ -4,20 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eve Sipariş Formu</title>
 
     <style>
+   
         body {
             background-color: #2B0505;
             color: #F5F5DC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #7F6000;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        fieldset {
+            border: 2px solid #F5F5DC;
+            padding: 20px;
+            border-radius: 8px;
         }
 
         legend {
             font-size: 35px;
+            padding: 0 10px;
         }
 
         h1 {
-            font: size 25px;
+            font-size: 25px;
+            margin-top: 0;
+            color: #F5F5DC;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #F5F5DC;
+            color: #2B0505;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .butonlar {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #ccc;
+            color: #2B0505;
         }
     </style>
 </head>
@@ -25,70 +102,258 @@
 <body>
 
     <main>
-
-        <form>
+        <form method="get" action="Eve Siparis.html">
 
             <fieldset>
                 <h1>Müşteri Bilgileri</h1>
                 <legend>Eve Şipariş</legend>
-                <label>Ad Soyad</label>
-                <input type="text" name="adSoyad" required="required"><br><br>
-                <label>Telefon No</label>
-                <input type="number" name="Telno" required="required"><br><br>
-                <label>Adres Bilgisi</label><br><br>
-                <textarea rows="10" cols="40" tabindex="2"></textarea> <br><br>
 
+                <label for="adSoyad">Ad Soyad</label>
+                <input type="text" id="adSoyad" name="adSoyad" required="required">
 
-                <label>Hamburger Menüler</label>
-                <select name="Hamburger Menüler" size="1">
-                    <option value="Big King XXL Menü">Big King XXL Menü </option>
-                    <option value="Double Cheeseburger Menü">Double Cheeseburger Menü</option>
-                    <option value="Cheeseburger Menü">Cheeseburger Menü</option>
-                    <option value="Kral Avantaj Menüsü">Kral Avantaj Menüsü</option>
-                    <option value="King Beef Burger Menü">King Beef Burger Menü</option>
-                    <option value="Tavuklu Barbekü Brioche Menü">Tavuklu Barbekü Brioche Menü</option>
-                    <option value="Texas Smokehouse Burger Menü">Texas Smokehouse Burger Menü</option>
-                    <option value="Tavuklu Barbekü Brioche Menü">Tavuklu Barbekü Brioche Menü</option>
-                    <option value="Whopper Menü">Whopper Menü</option>
+                <label for="telNo">Telefon No</label>
+                <input type="number" id="telNo" name="Telno" required="required">
+
+                <label for="adresBilgisi">Adres Bilgisi</label>
+                <textarea id="adresBilgisi" name="adresBilgisi" rows="5" cols="40" tabindex="2"></textarea>
+
+                <label for="hamburgerMenu">Hamburger Menüler</label>
+                <select id="hamburgerMenu" name="HamburgerMenusu" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir menü seçin --</option>
+                    <option value="BigKingXXL">Big King XXL Menü </option>
+                    <option value="DoubleCheeseburger">Double Cheeseburger Menü</option>
+                    <option value="Cheeseburger">Cheeseburger Menü</option>
+                    <option value="KralAvantaj">Kral Avantaj Menüsü</option>
+                    <option value="KingBeef">King Beef Burger Menü</option>
+                    <option value="TavukluBarbekuBrioche">Tavuklu Barbekü Brioche Menü</option>
+                    <option value="TexasSmokehouse">Texas Smokehouse Burger Menü</option>
+                    <option value="Whopper">Whopper Menü</option>
                 </select>
 
-                <label>  Çocuk Menüleri  </label>
-                <select name="Çocuk Menüleri" size="1">
-                    <option value="Kids Hamburger Menü">Kids Hamburger Menü</option>
-                    <option value="Kids Cheese Menü">Kids Cheese Menü</option>
-                    <option value="Tavuklu Kids Menü">Tavuklu Kids Menü</option>
+                <label for="cocukMenu">Çocuk Menüleri</label>
+                <select id="cocukMenu" name="CocukMenusu" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir menü seçin --</option>
+                    <option value="KidsHamburger">Kids Hamburger Menü</option>
+                    <option value="KidsCheese">Kids Cheese Menü</option>
+                    <option value="TavukluKids">Tavuklu Kids Menü</option>
                 </select>
 
-                <label>  ÇITIR LEZZETLER & TATLILAR </label>
-                <select name="ÇITIR LEZZETLER & TATLILAR" size="1">
-                    <option value="King Nuggets (6'lı) veya (9'lü)">King Nuggets (6'lı) veya (9'lü)</option>
-                    <option value="Chicken Tenders (4'lü) veya (6'lı) veya (9'lu)">Chicken Tenders (4'lü) veya (6'lı) veya (9'lu)</option>
-                    <option value="Patates Kızartması"> Patates Kızartması Küçük Boy ,Patates Kızartması Orta Boy,Patates Kızartması Büyük Boy , Patates Kızartması Ritim Boy</option>
-                    <option value="Soğan Halkası (8li) veya Soğan Halkası(12'li) veya (16'lı)">Soğan Halkası (8"li) veya Soğan Halkası(12'li) veya (16'lı)</option>
+                <label for="citirlezzet">ÇITIR LEZZETLER</label>
+                <select id="citirlezzet" name="CitirLezzetler" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir ürün seçin --</option>
+                    <option value="KingNuggets6">King Nuggets (6'lı) </option>
+                    <option value="KingNuggets9">King Nuggets (9'lü)</option>
+                    <option value="ChickenTenders4">Chicken Tenders (4'lü)</option>
+                    <option value="ChickenTenders6">Chicken Tenders(6'lı) </option>
+                    <option value="ChickenTenders9"> Chicken Tenders (9'lu)</option>
+                    <option value="PatatesKucuk"> Patates Kızartması Küçük Boy </option>
+                    <option value="PatatesOrta"> Patates Kızartması Orta Boy</option>
+                    <option value="PatatesBuyuk"> Patates Kızartması Büyük Boy </option>
+                    <option value="PatatesRitim">Patates Kızartması Ritim Boy</option>
+                    <option value="SoganHalkasi8">Soğan Halkası (8'li)</option>
+                    <option value="SoganHalkasi12"> Soğan Halkası(12'li)</option>
+                    <option value="SoganHalkasi16"> Soğan Halkası (16'lı)</option>
+                </select>
+
+                <label for="tatli">Tatlılar</label>
+                <select name="TatliMenusu" id="TATLILAR" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir tatlı seçin --</option>
                     <option value="Sufle">Sufle</option>
-                    <option value="Çikolatalı Cookie">Çikolatalı Cookie</option>
-                    <option value="Kornet Kulah">Kornet Kulah</option>
+                    <option value="CikolataliCookie">Çikolatalı Cookie</option>
+                    <option value="KornetKulah">Kornet Kulah</option>
+                </select>
+                
+                <div class="butonlar">
+                    <input type="submit" value="Tamam">
+                    <input type="reset" value="Temizle">
+                </div>
 
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+    </footer>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eve Sipariş Formu</title>
+
+    <style>
+   
+        body {
+            background-color: #2B0505;
+            color: #F5F5DC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #7F6000;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        fieldset {
+            border: 2px solid #F5F5DC;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-size: 35px;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-top: 0;
+            color: #F5F5DC;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #F5F5DC;
+            color: #2B0505;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .butonlar {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #ccc;
+            color: #2B0505;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <form method="get" action="Eve Siparis.html">
+
+            <fieldset>
+                <h1>Müşteri Bilgileri</h1>
+                <legend>Eve Şipariş</legend>
+
+                <label for="adSoyad">Ad Soyad</label>
+                <input type="text" id="adSoyad" name="adSoyad" required="required">
+
+                <label for="telNo">Telefon No</label>
+                <input type="number" id="telNo" name="Telno" required="required">
+
+                <label for="adresBilgisi">Adres Bilgisi</label>
+                <textarea id="adresBilgisi" name="adresBilgisi" rows="5" cols="40" tabindex="2"></textarea>
+
+                <label for="hamburgerMenu">Hamburger Menüler</label>
+                <select id="hamburgerMenu" name="HamburgerMenusu" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir menü seçin --</option>
+                    <option value="BigKingXXL">Big King XXL Menü </option>
+                    <option value="DoubleCheeseburger">Double Cheeseburger Menü</option>
+                    <option value="Cheeseburger">Cheeseburger Menü</option>
+                    <option value="KralAvantaj">Kral Avantaj Menüsü</option>
+                    <option value="KingBeef">King Beef Burger Menü</option>
+                    <option value="TavukluBarbekuBrioche">Tavuklu Barbekü Brioche Menü</option>
+                    <option value="TexasSmokehouse">Texas Smokehouse Burger Menü</option>
+                    <option value="Whopper">Whopper Menü</option>
                 </select>
 
-                <footer>
+                <label for="cocukMenu">Çocuk Menüleri</label>
+                <select id="cocukMenu" name="CocukMenusu" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir menü seçin --</option>
+                    <option value="KidsHamburger">Kids Hamburger Menü</option>
+                    <option value="KidsCheese">Kids Cheese Menü</option>
+                    <option value="TavukluKids">Tavuklu Kids Menü</option>
+                </select>
 
-                    <form method="get" action="Eve Şiparis.html">
-                        <p>
-                            <label for="kullanici"></label>
-                        </p>
+                <label for="citirlezzet">ÇITIR LEZZETLER</label>
+                <select id="citirlezzet" name="CitirLezzetler" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir ürün seçin --</option>
+                    <option value="KingNuggets6">King Nuggets (6'lı) </option>
+                    <option value="KingNuggets9">King Nuggets (9'lü)</option>
+                    <option value="ChickenTenders4">Chicken Tenders (4'lü)</option>
+                    <option value="ChickenTenders6">Chicken Tenders(6'lı) </option>
+                    <option value="ChickenTenders9"> Chicken Tenders (9'lu)</option>
+                    <option value="PatatesKucuk"> Patates Kızartması Küçük Boy </option>
+                    <option value="PatatesOrta"> Patates Kızartması Orta Boy</option>
+                    <option value="PatatesBuyuk"> Patates Kızartması Büyük Boy </option>
+                    <option value="PatatesRitim">Patates Kızartması Ritim Boy</option>
+                    <option value="SoganHalkasi8">Soğan Halkası (8'li)</option>
+                    <option value="SoganHalkasi12"> Soğan Halkası(12'li)</option>
+                    <option value="SoganHalkasi16"> Soğan Halkası (16'lı)</option>
+                </select>
 
-                        <p>
-                            <input type="submit" value="Tamam">
-                            <input type="reset" value="Temizle">
-                        </p>
+                <label for="tatli">Tatlılar</label>
+                <select name="TatliMenusu" id="TATLILAR" size="1">
+                    <option value="" selected disabled hidden>-- Lütfen bir tatlı seçin --</option>
+                    <option value="Sufle">Sufle</option>
+                    <option value="CikolataliCookie">Çikolatalı Cookie</option>
+                    <option value="KornetKulah">Kornet Kulah</option>
+                </select>
+                
+                <div class="butonlar">
+                    <input type="submit" value="Tamam">
+                    <input type="reset" value="Temizle">
+                </div>
 
-                    </form>
-
-                    <hr>
-
-                </footer>
             </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+    </footer>
 </body>
 
 </html>
