@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eve Sipariş Formu</title>
+    <title>Document</title>
+</head>
+
+<head>
+   
 
     <style>
    
@@ -96,6 +99,53 @@
             background-color: #ccc;
             color: #2B0505;
         }
+
+        @media (max-width: 768px) {
+            
+            main {
+
+                width: 95%;
+
+                padding: 15px; 
+            }
+
+            legend {
+
+                font-size: 30px; 
+            }
+
+            h1 {
+                font-size: 20px; 
+            }
+            
+            .butonlar {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px; 
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+                margin: 0; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            legend {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            fieldset {
+                padding: 15px 10px;
+            }
+        }
+
     </style>
 </head>
 
@@ -160,186 +210,8 @@
                     <option value="" selected disabled hidden>-- Lütfen bir tatlı seçin --</option>
                     <option value="Sufle">Sufle</option>
                     <option value="CikolataliCookie">Çikolatalı Cookie</option>
-                    <option value="KornetKulah">Kornet Kulah</option>
-                </select>
-                
-                <div class="butonlar">
-                    <input type="submit" value="Tamam">
-                    <input type="reset" value="Temizle">
-                </div>
-
-            </fieldset>
-        </form>
-    </main>
-
-    <footer>
-        <hr>
-    </footer>
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eve Sipariş Formu</title>
-
-    <style>
-   
-        body {
-            background-color: #2B0505;
-            color: #F5F5DC;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        main {
-            padding: 20px;
-            background-color: #7F6000;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            width: 80%;
-            max-width: 600px;
-        }
-
-        fieldset {
-            border: 2px solid #F5F5DC;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        legend {
-            font-size: 35px;
-            padding: 0 10px;
-        }
-
-        h1 {
-            font-size: 25px;
-            margin-top: 0;
-            color: #F5F5DC;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #F5F5DC;
-            color: #2B0505;
-        }
-
-        select {
-            height: 40px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .butonlar {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        input[type="submit"],
-        input[type="reset"] {
-            padding: 10px 20px;
-            margin-left: 10px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-        }
-
-        input[type="reset"] {
-            background-color: #ccc;
-            color: #2B0505;
-        }
-    </style>
-</head>
-
-<body>
-
-    <main>
-        <form method="get" action="Eve Siparis.html">
-
-            <fieldset>
-                <h1>Müşteri Bilgileri</h1>
-                <legend>Eve Şipariş</legend>
-
-                <label for="adSoyad">Ad Soyad</label>
-                <input type="text" id="adSoyad" name="adSoyad" required="required">
-
-                <label for="telNo">Telefon No</label>
-                <input type="number" id="telNo" name="Telno" required="required">
-
-                <label for="adresBilgisi">Adres Bilgisi</label>
-                <textarea id="adresBilgisi" name="adresBilgisi" rows="5" cols="40" tabindex="2"></textarea>
-
-                <label for="hamburgerMenu">Hamburger Menüler</label>
-                <select id="hamburgerMenu" name="HamburgerMenusu" size="1">
-                    <option value="" selected disabled hidden>-- Lütfen bir menü seçin --</option>
-                    <option value="BigKingXXL">Big King XXL Menü </option>
-                    <option value="DoubleCheeseburger">Double Cheeseburger Menü</option>
-                    <option value="Cheeseburger">Cheeseburger Menü</option>
-                    <option value="KralAvantaj">Kral Avantaj Menüsü</option>
-                    <option value="KingBeef">King Beef Burger Menü</option>
-                    <option value="TavukluBarbekuBrioche">Tavuklu Barbekü Brioche Menü</option>
-                    <option value="TexasSmokehouse">Texas Smokehouse Burger Menü</option>
-                    <option value="Whopper">Whopper Menü</option>
-                </select>
-
-                <label for="cocukMenu">Çocuk Menüleri</label>
-                <select id="cocukMenu" name="CocukMenusu" size="1">
-                    <option value="" selected disabled hidden>-- Lütfen bir menü seçin --</option>
-                    <option value="KidsHamburger">Kids Hamburger Menü</option>
-                    <option value="KidsCheese">Kids Cheese Menü</option>
-                    <option value="TavukluKids">Tavuklu Kids Menü</option>
-                </select>
-
-                <label for="citirlezzet">ÇITIR LEZZETLER</label>
-                <select id="citirlezzet" name="CitirLezzetler" size="1">
-                    <option value="" selected disabled hidden>-- Lütfen bir ürün seçin --</option>
-                    <option value="KingNuggets6">King Nuggets (6'lı) </option>
-                    <option value="KingNuggets9">King Nuggets (9'lü)</option>
-                    <option value="ChickenTenders4">Chicken Tenders (4'lü)</option>
-                    <option value="ChickenTenders6">Chicken Tenders(6'lı) </option>
-                    <option value="ChickenTenders9"> Chicken Tenders (9'lu)</option>
-                    <option value="PatatesKucuk"> Patates Kızartması Küçük Boy </option>
-                    <option value="PatatesOrta"> Patates Kızartması Orta Boy</option>
-                    <option value="PatatesBuyuk"> Patates Kızartması Büyük Boy </option>
-                    <option value="PatatesRitim">Patates Kızartması Ritim Boy</option>
-                    <option value="SoganHalkasi8">Soğan Halkası (8'li)</option>
-                    <option value="SoganHalkasi12"> Soğan Halkası(12'li)</option>
-                    <option value="SoganHalkasi16"> Soğan Halkası (16'lı)</option>
-                </select>
-
-                <label for="tatli">Tatlılar</label>
-                <select name="TatliMenusu" id="TATLILAR" size="1">
-                    <option value="" selected disabled hidden>-- Lütfen bir tatlı seçin --</option>
-                    <option value="Sufle">Sufle</option>
-                    <option value="CikolataliCookie">Çikolatalı Cookie</option>
-                    <option value="KornetKulah">Kornet Kulah</option>
+                    <option value="Kornet Dondurma">Kornet Dondurma</option>
+                    <option value="Kulah Dondurma">Kulah Dondurma</option>
                 </select>
                 
                 <div class="butonlar">
