@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritim Burger Menü</title>
+
+    <link rel="stylesheet" href="still/still.css">
+
+    <style>
+        body {
+            background-color: #2B0505;
+            color: #F5F5DC;
+            font-family: Arial, sans-serif;
+        }
+
+        .yazı {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            gap: 20px;
+        }
+
+        .yazı img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .kapsayici {
+            background-color: #7F6000;
+            margin: 25px auto;
+            padding: 30px;
+            max-width: 2000px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .item {
+            background-color: #F5F5DC;
+            color: #2B0505;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .baslik {
+            font-weight: bold;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .icerik {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+        }
+
+        .fiyat {
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .bos-yer-tutucu {
+            visibility: hidden;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .bolum-ayirici {
+            border: none;
+            border-top: 3px solid #F5F5DC;
+            margin: 60px auto;
+            width: 90%;
+            max-width: 1400px;
+            box-sizing: border-box;
+        }
+
+        .eve-siparis {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .eve-siparis a {
+            font-size: 45px;
+            color: #F5F5DC;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 3px solid #F5F5DC;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .eve-siparis a:hover {
+            color: #FFD700;
+            border-bottom-color: #FFD700;
+        }
+
+        @media (max-width: 600px) {
+            .yazı {
+                font-size: 40px;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .yazı img {
+                max-width: 100px;
+            }
+
+            .kapsayici {
+                grid-template-columns: 1fr 1fr;
+                padding: 15px;
+            }
+            
+            .bos-yer-tutucu {
+                display: none;
+            }
+            
+            .item img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .kapsayici {
+                grid-template-columns: 1fr;
+                padding: 10px; 
+            }
+            
+            .item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 15px; 
+            }
+
+            .item img {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 15px;
+            }
+            
+            .metin-blogu {
+                 width: 100%; 
+                 box-sizing: border-box; 
+            }
+
+            .baslik {
+                font-size: 24px;
+            }
+            
+            .icerik {
+                 font-size: 14px;
+            }
+
+            .fiyat {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="yazı">
+            <img src="Resimler/Logo.png" alt="Ritim Burger Logo">
+
+            <p>Ritim Burger</p>
+        </div>
+    </header>
+
+    <hr class="bolum-ayirici">
+    <main>
+
+        <div class="yazı" style="font-size: 40px;">
+            <p>HAMBURGER MENÜLERİ</p>
+        </div>
+
+        <div class="kapsayici">
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/big-king-xxl-menu.webp" alt="Big King XXL">
+                <div class="metin-blogu">
+                    <p class="baslik">Big King XXL Menü</p>
+                    <p class="icerik">Big King XXL + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">490 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/double-cheeseburger-menu.webp" alt="Double Cheeseburger">
+                <div class="metin-blogu">
+                    <p class="baslik">Double Cheeseburger Menü</p>
+                    <p class="icerik">Double Cheeseburger + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">300 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/cheeseburger-menu.webp" alt="Cheeseburger Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Cheeseburger Menü</p>
+                    <p class="icerik">Cheeseburger + Patates Kızartması (Küçük) + Ayran (20 cl.)</p>
+                    <p class="fiyat">255 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/fiyat menü.png" alt="Kral Avantaj Menüsü">
+                <div class="metin-blogu">
+                    <p class="baslik">Kral Avantaj Menüsü</p>
+                    <p class="icerik">Double Whopper Jr. + King Chicken + Patates Kızartması (Orta) + Soğan Halkası
+                        (4’lü) + 1 L. İçecek</p>
+                    <p class="fiyat">390 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/king-beef-burger-menu.webp" alt="King Beef Burger Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">King Beef Burger Menü</p>
+                    <p class="icerik">King Beef Burger + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">440 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/klasik-gurme-tavuk-menu.webp" alt="Klasik Gurme Tavuk Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Klasik Gurme Tavuk Menü</p>
+                    <p class="icerik">Klasik Gurme Tavuk + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">280 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/tavuklu-barbeku-brioche-menu.webp" alt="Tavuklu Barbekü Brioche Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Tavuklu Barbekü Brioche Menü</p>
+                    <p class="icerik">Tavuklu Barbekü Brioche + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">295 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/texas-smokehouse-burger-menu.webp" alt="Texas Smokehouse Burger Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Texas Smokehouse Burger Menü</p>
+                    <p class="icerik">Texas Smokehouse Burger + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">420 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/texas-smokehouse-burger-menu.webp"
+                    alt="Tavuklu Barbekü Brioche® Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Tavuklu Barbekü Brioche Menü </p>
+                    <p class="icerik">Tavuklu Barbekü Brioche + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">295 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Hamburger Menü/whopper-menu.webp" alt="Whopper® Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Whopper Menü</p>
+                    <p class="icerik">Whopper + Patates Kızartması (Orta) + Kutu İçecek</p>
+                    <p class="fiyat">335 TL</p>
+                </div>
+            </div>  
+
+            <div class="item bos-yer-tutucu"></div>
+            <div class="item bos-yer-tutucu"></div>
+        </div>
+        <hr class="bolum-ayirici">
+
+        <div class="yazı" style="font-size: 40px;">
+            <p>ÇOCUK MENÜLERİ</p>
+        </div>
+
+        <div class="kapsayici">
+            <div class="item">
+                <img src="Resimler/Çocuk Menü/kids-hamburger.webp" alt="Kids Hamburger Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Kids Hamburger Menü</p>
+                    <p class="icerik">Kids Hamburger + Patates Kızartması (Küçük) + Ayran (20 cl.) + Sürpriz Oyuncak</p>
+                    <p class="fiyat">255 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Çocuk Menü/kids-cheeseburger.webp" alt="Kids Cheese Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Kids Cheese Menü</p>
+                    <p class="icerik">Kids Cheeseburger + Patates Kızartması (Küçük) + Ayran (20 cl.) + Sürpriz Oyunca
+                    </p>
+                    <p class="fiyat">265 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Çocuk Menü/kids-tavukburger.webp " alt="Tavuklu Kids Menü">
+                <div class="metin-blogu">
+                    <p class="baslik">Tavuklu Kids Menü</p>
+                    <p class="icerik">Tavuklu Kids + Patates Kızartması (Küçük) + Ayran (20 cl.) + Sürpriz Oyuncak</p>
+                    <p class="fiyat">215 TL</p>
+                </div>
+            </div>
+
+            <div class="item bos-yer-tutucu"></div>
+            <div class="item bos-yer-tutucu"></div>
+            <div class="item bos-yer-tutucu"></div>
+        </div>
+        <hr class="bolum-ayirici">
+
+        <div class="yazı" style="font-size: 40px;">
+            <p>ÇITIR LEZZETLER & TATLILAR</p>
+        </div>
+
+        <div class="kapsayici">
+            <div class="item">
+                <img src="Resimler/Çıtır Lezzetler/bk-king-nuggets.webp" alt="King Nuggets">
+                <div class="metin-blogu">
+                    <p class="baslik">King Nuggets (6'lı) veya (9'lü)</p>
+                    <p class="icerik">6 adet veya 9 adet</p>
+                    <p class="fiyat">(6'lı) 85TL,(9'lu) 100Tl</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Çıtır Lezzetler/chicken-tenders.webp" alt="Chicken Tenders">
+                <div class="metin-blogu">
+                    <p class="baslik">Chicken Tenders (4'lü) veya (6'lı) veya (9'lu) </p>
+                    <p class="icerik">4 adet veya 6 adet veya 9 adet</p>
+                    <p class="fiyat">(4lü) 65TL ,(6'lı) 85TL,(9'lu) 100Tl</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Çıtır Lezzetler/patates.webp" alt="Patates Kızartması">
+                <div class="metin-blogu">
+                    <p class="baslik">Patates Kızartması</p>
+                    <p class="icerik">Küçük Boy veya Orta Boy veya Büyük Boy veya Ritim Boy</p>
+                    <p class="fiyat">Küçük Boy 45TL ,Orta Boy 50TL , Büyük Boy 55TL,Ritim Boy 60TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Çıtır Lezzetler/sogan-halkasi.webp" alt="Soğan Halkası">
+                <div class="metin-blogu">
+                    <p class="baslik">Soğan Halkası (8"li) veya Soğan Halkası(12'li) veya (16'lı)</p>
+                    <p class="icerik">8 adet veya 12 adet veya 16 adet</p>
+                    <p class="fiyat">(8'li) 50TL veya (12'li) 65TL veya (16'lı) 80TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Tatlılar/sufle.png" alt="Sufle">
+                <div class="metin-blogu">
+                    <p class="baslik">Sufle</p>
+                    <p class="icerik">1 adet </p>
+                    <p class="fiyat">80 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Tatlılar/cikolatali-cookie.webp " alt="Çikolatalı Cookie">
+                <div class="metin-blogu">
+                    <p class="baslik">Çikolatalı Cookie</p>
+                    <p class="icerik">1 adet</p>
+                    <p class="fiyat">60 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Tatlılar/kornet-kulah.webp" alt="Kornet Kulah">
+                <div class="metin-blogu">
+                    <p class="baslik">Kornet Kulah</p>
+                    <p class="fiyat">55 TL</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Resimler/Tatlılar/kulah-dondurma.webp" alt="Kulah Dondurma">
+                <div class="metin-blogu">
+                    <p class="baslik">Kulah Dondurma</p>
+                    <p class="fiyat">50TL</p>
+                </div>
+            </div>
+
+            <div class="item bos-yer-tutucu"></div>
+            <div class="item bos-yer-tutucu"></div>
+
+
+        </div>
+        <div class="eve-siparis">
+            <a href="sayfa2.html">Eve Şipariş</a>
+        </div>
+    </main>
+
+    <footer>
+
+
+
+    </footer>
+</body>
+
+</html>
